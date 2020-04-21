@@ -9,7 +9,7 @@ if(isset($_GET['page'])){
     $class ="active";
 }else {
     $page_num=1; 
-    $class="active";
+    $class = "active";
 }
 ?>
 <!DOCTYPE html>
@@ -41,8 +41,10 @@ if(isset($_GET['page'])){
                     <div class="score">3 pts</div>
                     <?php ?>
                 </div>
-                <a href="player.php?page=1" class="top-score">Top scores</a>
-                <a href="player.php?page=2" class="best-score">Mon meilleur score</a>
+                <div>
+                    <div class="top-score"><a class="<?php if($page_num==1){echo $class;} ?>" href="player.php?page=1">Top scores</a></div>
+                    <div class="best-score"><a class="<?php if($page_num==2){echo $class;} ?>"  href="player.php?page=2">Mon meilleur score</a></div>
+                </div>
                 <div class="interface-score">
                 <?php
                     if(isset($_GET['page'])){
@@ -50,9 +52,10 @@ if(isset($_GET['page'])){
                         if ($page_num==1) {
                             require_once('topScorelist.php');  
                         }else{
-                            echo $_SESSION['user']['prenom']."<br>";
-                            echo $_SESSION['user']['score']."<br>";
+                            echo "<p>".$_SESSION['user']['score']."pts </p>";
                         }
+                    }else {
+                        require_once('topScorelist.php');  
                     }
                     ?>
                 </div>

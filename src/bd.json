@@ -14,7 +14,7 @@
         "profil":"joueur",
         "login":"Amy",
         "password":"azerty",
-        "image":"Screenshot_20190427-235515.png",
+        "image":"IMG_20190321_123603_4png",
         "score":"547"
         },
         {
@@ -23,8 +23,8 @@
         "profil":"joueur",
         "login":"azerty",
         "password":"azerty",
-        "image":"IMG_20190324_213649_154.jpg",
-        "score":"985"
+        "image":"IMG_20190321_123603_4.jpg",
+        "score":"955"
         },
         {
         "prenom":"Modou",
@@ -32,8 +32,8 @@
         "profil":"joueur",
         "login":"Qwerty3",
         "password":"Qwerty",
-        "image":"IMG_20190516_175624_4.jpg",
-        "score":"1000"
+        "image":"IMG_20190321_123603_4.jpg",
+        "score":"1010"
     },
     {
         "prenom":"Muhammad",
@@ -49,25 +49,116 @@
         "profil":"joueur",
         "login":"Amy",
         "password":"azerty",
-        "image":"Screenshot_20190427-235515.png",
+        
+        "image":"IMG_20190321_123603_4.jpg",
         "score":"547"
         },
         {
-        "prenom":"Mbaye",
-        "nom":"Paye",
+        "prenom":"Minetou",
+        "nom":"Digne",
         "profil":"joueur",
         "login":"azerty",
         "password":"azerty",
-        "image":"IMG_20190324_213649_154.jpg",
-        "score":"985"
+        "image":"IMG_20190321_123603_4.jpg",
+        "score":"485"
+        },{
+            "prenom":"Madeleinete",
+            "nom":"Folle",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"85"
+            },
+        {
+            "prenom":"Rama",
+            "nom":"Ndoye",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"185"
+            },
+        {
+            "prenom":"Modou",
+            "nom":"Xoulé",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"385"
+            },
+        {
+            "prenom":"Mor",
+            "nom":"Diaw",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"995"
+            },
+        {
+            "prenom":"Mamour",
+            "nom":"Mbeute",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"685"
+            },
+        {
+            "prenom":"Amayel",
+            "nom":"Kane",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"686"
+            },
+        {
+            "prenom":"Issa",
+            "nom":"Faye",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"985"
+            },
+        {
+            "prenom":"Céline",
+            "nom":"Paye",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"585"
+            },
+
+        {
+            "prenom":"Fatou",
+            "nom":"Pame",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"95"
+            },
+        {
+            "prenom":"Coumba",
+            "nom":"Paye",
+            "profil":"joueur",
+            "login":"azerty",
+            "password":"azerty",
+            "image":"IMG_20190321_123603_4.jpg",
+            "score":"935"
         },
         {
-        "prenom":"Modou",
+        "prenom":"Ablaye",
         "nom":"FALL",
         "profil":"joueur",
         "login":"Qwerty3",
         "password":"Qwerty",
-        "image":"IMG_20190516_175624_4.jpg",
+        "image":"IIMG_20190321_123603_4.jpg",
         "score":"1000"
     }
 ]

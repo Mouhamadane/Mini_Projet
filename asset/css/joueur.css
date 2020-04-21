@@ -133,7 +133,6 @@ br{
     cursor:pointer;
     padding: 10px 0px 0px 0px;
     color: #2796ae;
-    background-color: rgb(56, 45, 45);
 }
 .best-score{
     float: left;
@@ -149,9 +148,26 @@ br{
     color: #2796ae;
     background-color: white;
 }
+a{
+    text-decoration: none;
+    color: #2796ae;
+}
 .active{
+    float: left;
+    width: 100%;
+    margin-top: -10px;
     position: relative;
-    background-color: wheat;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor:pointer;
+    text-decoration: none;
+    padding: 10px 0px 0px 0px;
+    height: 40px;
+    color: #8d8070;
+    background-color: white;
+    box-shadow: 0 -5px 5px -5px #8d8070;
+    box-shadow: ;
 }
 .interface-header{
     width: 90%;
@@ -176,6 +192,21 @@ br{
     padding: 18px 0px 0px 0px;
     background-color: #f7f7f7;
     box-shadow: 0px 2px 2px #2796ae, 0 2px 2px #2796ae;
+}
+.efa{
+    width: 65%;
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 15px;
+    border: 5px;
+}
+.point{
+    width: 20%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+    border-bottom: 4px solid tomato;
 }
 .input-form{
     height: 60px;
@@ -225,6 +256,7 @@ br{
     font-weight: bold;
     color: silver;
 }
+
 
 
 

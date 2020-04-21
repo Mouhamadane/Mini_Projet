@@ -7,20 +7,24 @@ foreach ($users as $key => $user) {
         array_push($players,$user);
     } 
 }
+foreach ($players as $key => $value) {
+    $score[$key] = $value['score'];
+}
+array_multisort($score,SORT_DESC,$players);
 ?>
 <div class="liste-form">
     <table class="table">
         <tbody>
-        <?php foreach ($players as $key => $player) { ?>
+        <?php for ($i=0; $i <4 ; $i++) {?>
             <tr>
-                <td><?= $player['prenom']?></td>
-                <td><?= $player['nom']?></td>
-                <td><?= $player['score']?> pts</td>
+                <td class="efa"><?= $players[$i]['prenom']." ". $players[$i]['nom']?></td>
+                <td class="point"><?= $players[$i]['score']?> pts</td>
             </tr>
        <?php } ?>
         </tbody>
     </table>
 </div>
+
 
 
 
