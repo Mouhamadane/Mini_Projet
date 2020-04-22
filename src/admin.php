@@ -29,7 +29,7 @@ if(isset($_GET['page'])){
     <div class="container">
         <div class="beforebox">
             <div class="header-text">CREER ET PARAMETTRER VOS QUIZZ</div>
-            <a href="logout.php"><button type="submit"  class="disconnect">Déconnexion</button></a>
+            <a href="logout.php" onclick="return(confirm('Vous vous déconnectez ?'));"><button type="submit"  class="disconnect">Déconnexion</button></a>
         </div>
         <div class="afterbox"> 
             <div class="promenu">

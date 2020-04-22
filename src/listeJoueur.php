@@ -29,7 +29,7 @@ array_multisort($score,SORT_DESC,$players);
                 if (isset($_POST['btn'])) {
                     $debut = $_SESSION['fin'];
                     $fin = $_SESSION['fin']+3;
-                }elseif (isset($_POST['btn2'])) {
+                }elseif (isset($_POST['btn2']) && $_SESSION['fin']>3) {
                     $debut = $_SESSION['fin']-6;
                     $fin = $_SESSION['fin']-3;
                 }else {

@@ -33,7 +33,7 @@ if(isset($_GET['page'])){
                 <div class="container-text"> BIENVENUE SUR LA PLATEFORME DE JEU DE QUIZZ <br>
                 JOUER ET TESTER VOTRE NIVEAU DE CULTURE GENERALE
                 </div>
-                <a href="logout.php"><button class="disconnect">Déconnexion</button></a>
+                <a href="logout.php" onclick="return(confirm('Vous vous déconnectez ?'));"><button class="disconnect">Déconnexion</button></a>
             </div>
             <div class="interface">
                 <div class="interface-jeu">

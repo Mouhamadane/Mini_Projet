@@ -51,13 +51,13 @@ body{
     background-color: #f2f2f2;
 }
 .profil{
-	height: 180px;
+	  height: 180px;
     z-index: 200;
-	width:100%;
-    background: #51bfd0;
+  	width:100%;
+    background: linear-gradient(white,#51bfd0);
     border-top-left-radius:5px ;
     border-top-right-radius:5px ;
-    box-shadow: 0 10px 20px #f2f2f2, 0 6px 6px #f2f2f2;
+    box-shadow: 0 10px 20px #8f8787, 0 6px 6px #969191;
 }
 .promenu{
     float: left;
