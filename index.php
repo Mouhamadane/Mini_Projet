@@ -23,7 +23,8 @@ if (!empty($error)) {
     $class = "beforebox2";
     $message = "";
 }
- ?>
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -35,7 +36,7 @@ if (!empty($error)) {
 <body>
     <img class="image" src="asset/img/logo-QuizzSA.png" alt="">
     <div class="haut">Le plaisir de jouer</div>
-    <div class="<?=$class ?>"><?=$message; if(!empty($error)){ echo $error; } ?></div>
+    <div class="<?=$class ?>"> <?= $message; if(!empty($error)){ echo $error; } ?> </div>
     <div class="box">
         <form action="" method="post">
             <div>

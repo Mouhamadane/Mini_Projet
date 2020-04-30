@@ -1,5 +1,10 @@
 <?php
-    function getData($file="bd"){
+    function getQuestion(){
+        $data = file_get_contents(dirname(__FILE__) .'/questions.json');
+        $data = json_decode($data,true);
+        return $data;
+    }
+    function getData(){
         $data = file_get_contents(dirname(__FILE__) .'/bd.json');
         $data = json_decode($data,true);
         return $data;
@@ -41,10 +46,18 @@
         $contenu = file_get_contents("./bd.json");
         $contenu = json_decode($contenu,true);
         $contenu[] = $tab;
-        $contenu = json_encode($contenu);
+        $contenu = json_encode($contenu,JSON_PRETTY_PRINT);
         file_put_contents("./bd.json",$contenu);
     }
-    
+    function ajouterQuestion($question,$point,$typeReponse,$bonneReponse,$badReponse){
+        $tab=["question"=>$question,"point"=>$point,"type"=>$typeReponse,"bonne"=>$bonneReponse,"mauvaise"=>$badReponse];
+        $contenu = file_get_contents("./questions.json");
+        $contenu = json_decode($contenu,true);
+        $contenu[] = $tab;
+        $contenu = json_encode($contenu,JSON_PRETTY_PRINT);
+        file_put_contents("./questions.json",$contenu);
+
+    }
     // Tester si un NOM
     function is_name($chaine){
         $chaine = trim($chaine);
@@ -70,3 +83,37 @@
     }
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

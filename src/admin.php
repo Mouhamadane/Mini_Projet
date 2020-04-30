@@ -34,10 +34,9 @@ if(isset($_GET['page'])){
         <div class="afterbox"> 
             <div class="promenu">
                 <div class="profil">
-                   <div class="avatar"><img src="../asset/img/<?=$_SESSION['user']['image']?>" class="tof" alt=""> </div>              
-                
-                <p class="prenom"><?= strtoupper($_SESSION['user']['prenom']);?></p>  
-                <p class="nom"><?= strtoupper($_SESSION['user']['nom']);?></p>  
+                   <div class="avatar"><img src="../asset/img/<?=$_SESSION['user']['image']?>" class="tof" alt=""> </div>
+                    <p class="prenom"><?= strtoupper($_SESSION['user']['prenom']);?></p>  
+                    <p class="nom"><?= strtoupper($_SESSION['user']['nom']);?></p>  
                 </div> 
                 <div class="menu">
                     <div class="sous">

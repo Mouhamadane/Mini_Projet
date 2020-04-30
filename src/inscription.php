@@ -94,6 +94,7 @@ if (isset($_POST['btn'])) {
                 <div>
                     <button type="submit" name="btn" class="btn">Créer compte</button>
                 </div>
+                <a href="javascript:window.history.back()">RETOUR</a>
             </form> 
         </div>
        
