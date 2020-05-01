@@ -81,6 +81,60 @@
         }
         return true;
     }
+    // Longueur d'une chaine
+    function long_chaine($chaine){
+        if (isset($chaine)){
+            $i=0;
+            for($j=0; isset($chaine[$i]); $j++) {
+                $i++;
+            }
+        return $i;
+        }
+    }
+    // Fonction qui permet de savoir si un caractere est une lettre ou pas
+    function is_car_alpha ($car){
+        if (($car < "a" ||  $car > "z") && ($car < "A" ||  $car > "Z")|| long_chaine($car)>1){
+            return false;
+        }
+        return true;
+    }
+    // Fonction qui permet de savoir si une chaine est un mot ou pas
+    function is_chaine_alpha($chaine){
+        for($i=0; $i<long_chaine($chaine); $i++){
+            if(!is_car_alpha($chaine[$i])){
+                return false;
+            }
+        }
+        return true;
+    }
+    // Tester si une chaine est une phrase
+    function is_chaine_phrase($chaine){
+        if(preg_match('#^[A-Z]{1}[a-z | ].+[.?!]$#',$chaine)){
+            return true;
+        }
+        return false;
+    
+    }
+    //Fonction qui permet de savoir si un caractere est numerique ou pas
+    function is_car_numeric ($car){
+        if ($car >= '0' &&  $car <= '9'){
+            return true;
+        }
+        return false;
+    }
+    //Fonction qui permet de savoir si un caractere est numerique ou pas
+    function is_chaine_numeric($chaine){
+        for ($i=0; $i <long_chaine($chaine); $i++){
+            if(!is_car_numeric($chaine[$i])){
+            return false;
+            } 
+        }
+        return true; 
+    }
+
+
+
+
 
 ?>
 

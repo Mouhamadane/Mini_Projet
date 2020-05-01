@@ -238,7 +238,6 @@ span{
   }
   button{
     float: left;
-    background: #cfd8dc;
     margin-top: 30px;
     color: white;
     font-size:20px;
@@ -289,6 +288,7 @@ span{
   .nom{
       position: absolute;
       margin-top: 5%;
+      width: 20%;
       margin-left: 18%;
       color: white;
       font-size: 25px;
@@ -299,6 +299,7 @@ span{
   .prenom{
     position: absolute;
     margin-top: 3%;
+    width: 20%;
     margin-left: 15%;
     color: white;
     font-size: 25px;
@@ -469,7 +470,7 @@ caption{
   }
   .ask-form{
     width: 96%;
-    height: 600px;
+    height: auto;
     margin-left: 2%;
     border: 2px solid #51bfd0;
     border-radius: 12px;
@@ -580,16 +581,18 @@ caption{
     height: 50px;
   }
   .enregistrer-form{
+    position: relative;
     height: 40px;
-    margin-left: 75%;
-    margin-bottom: 20px;
-    -webkit-appearance:none;
-    outline-style:none;
+    margin-top: 0px;
+    margin-left: 55%;
+    margin-top: 2%;
+    margin-bottom: 10px;
   }
   .error-form{
     color: red;
     text-align: center;
     left: 45%;
+    padding: 10px 0px 0px 0px;
     font-size: 20px;
   }
 /* ##############################Liste des quesstions############################### */
