@@ -7,8 +7,8 @@ foreach ($users as $key => $user) {
         array_push($players,$user);
     } 
 }
-foreach ($players as $key => $value) {
-    $score[$key] = $value['score'];
+for ($i=0; $i <count($players) ; $i++) { 
+    $score[$i]=$players[$i]['score'];
 }
 array_multisort($score,SORT_DESC,$players);
 ?>

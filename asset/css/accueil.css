@@ -249,6 +249,7 @@ span{
     outline-style:none;
     cursor:pointer;
     border-radius: 2px;
+    background-color: ;
   }
   .avatarInscription{
     position: absolute;
@@ -318,7 +319,7 @@ span{
     border: 2px solid #e4e4e4 ;
     border-radius: 10px;
 }
-.table{
+.liste-table{
     border: 2px solid #51bfd0;
     width: 80%;
     margin-left: 10%;
@@ -349,8 +350,10 @@ td{
 }
 caption{
     text-align: center;
+    width: 80%;
     padding: 30px 0px 10px 20px;
     color: #8d8070;
+    text-indent: 7%;
     font-size: 20px;
     font-weight: bold;
 }

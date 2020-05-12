@@ -1,4 +1,9 @@
 <?php
+     function getNombreQuestion(){
+        $data = file_get_contents(dirname(__FILE__) .'/param.json');
+        $data = json_decode($data,true);
+        return $data;
+    }
     function getQuestion(){
         $data = file_get_contents(dirname(__FILE__) .'/questions.json');
         $data = json_decode($data,true);
@@ -49,13 +54,23 @@
         $contenu = json_encode($contenu,JSON_PRETTY_PRINT);
         file_put_contents("./bd.json",$contenu);
     }
-    function ajouterQuestion($question,$point,$typeReponse,$bonneReponse,$badReponse){
-        $tab=["question"=>$question,"point"=>$point,"type"=>$typeReponse,"bonne"=>$bonneReponse,"mauvaise"=>$badReponse];
+    function ajouterQuestion($question,$point,$typeReponse,$tableauReponse){
+        $tab=["question"=>$question,"point"=>$point,"type"=>$typeReponse,"reponse"=>$tableauReponse];
         $contenu = file_get_contents("./questions.json");
         $contenu = json_decode($contenu,true);
         $contenu[] = $tab;
         $contenu = json_encode($contenu,JSON_PRETTY_PRINT);
         file_put_contents("./questions.json",$contenu);
+
+    }
+    // Ajouter Nombre question
+    function ajouterNombreQuestion($nomberQuestion){
+        $tab= ["num"=>$nomberQuestion];
+        $contenu = file_get_contents("./param.json");
+        $contenu = json_decode($contenu,true);
+        $contenu = $tab;
+        $contenu = json_encode($contenu,JSON_PRETTY_PRINT);
+        file_put_contents("./param.json",$contenu);
 
     }
     // Tester si un NOM
@@ -131,7 +146,17 @@
         }
         return true; 
     }
-
+    // Rendre un tableau aleatoire
+    // Rendre un tableau aleatoire
+    function array_random($arr, $num = 1) {
+        shuffle($arr);
+    
+        $r = array();
+        for ($i = 0; $i < $num; $i++) {
+            $r[] = $arr[$i];
+        }
+        return $num == 1 ? $r[0] : $r;
+    }
 
 
 

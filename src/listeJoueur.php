@@ -14,7 +14,7 @@ array_multisort($score,SORT_DESC,$players);
 ?>
 <div class="liste-form">
     <form action="" method="post">
-        <table class="listK-form">
+        <table class="liste-table">
             <caption> LISTE DES JOUEURS PAR SCORE</caption>
             <thead>
             <tr>

@@ -26,13 +26,14 @@
                     }
                     foreach ($tabRef as $key=>$value) {
                         if (in_array($key,$_POST['radio'])) {
-                            array_push($bonneReponse,$_POST['radiotext'][$key]);
+                            $tableauReponse[$_POST['radiotext'][$key]]= "true";
+                        }else {
+                            $tableauReponse[$_POST['radiotext'][$key]]= "false";
                         }
                     }
-                    $badReponse = array_diff($_POST['radiotext'],$bonneReponse);
                 }
                 if (empty($error['question'])&& empty($error['point'])&& empty($error['type'])&& empty($error['champs'])&& empty($error['radio'])) {
-                    ajouterQuestion($question,$point,$typeReponse,$bonneReponse,$badReponse);
+                    ajouterQuestion($question,$point,$typeReponse,$tableauReponse);
                 }
             }elseif($typeReponse=="multiple"){
                 if (empty($_POST['multiple'])) {
@@ -41,28 +42,29 @@
                 if (isset($_POST['multiple'])&& isset($_POST['multi'])) {
                     $tabMulti = array();
                     for ($i=0; $i <count($_POST['refM']) ; $i++) { 
-                        $tabMulti[$_POST['refM'][$i]]= $_POST['radio'][$i];
+                        $tabMulti[$_POST['refM'][$i]]= $_POST['multi'][$i];
                     }
                     foreach ($tabMulti as  $key=>$value) {
                         if (in_array($key,$_POST['multi'])) {
-                            array_push($bonneReponse,$_POST['multiple'][$key]);
+                            $tableauReponse[$_POST['multiple'][$key]]="true";
+                        }else {
+                            $tableauReponse[$_POST['multiple'][$key]]="false";
                         }
                     }
-                    $badReponse = array_diff($_POST['multiple'],$badReponse);
                 }
                 if (empty($error['question'])&& empty($error['point'])&& empty($error['type'])&& empty($error['champs'])&& empty($error['radio'])) {
-                    ajouterQuestion($question,$point,$typeReponse,$bonneReponse,$badReponse);
+                    ajouterQuestion($question,$point,$typeReponse,$tableauReponse);
                 }
 
             }else {
                 if (empty($_POST['reponsetext'])) {
                     $error['champs'] = "Veuillez remplir les champs";
                 }else{
-                    array_push($bonneReponse,$_POST['reponsetext']);
+                    array_push($tableauReponse,$_POST['reponsetext']);
 
                 }
                 if (empty($error['question'])&& empty($error['point'])&& empty($error['type'])&& empty($error['champs'])&& empty($error['multiple'])) {
-                    ajouterQuestion($question,$point,$typeReponse,$bonneReponse,$badReponse);
+                    ajouterQuestion($question,$point,$typeReponse,$tableauReponse);
                 }
 
             }
@@ -143,7 +145,7 @@
                 divError.innerText = "";
                 newInput.innerHTML = `<label for="" class="label-form">Réponse `+rep+`</label>
                 <input type="text" class="reponse-form" name="multiple[]" error="error-4" id="text"required>
-                <input type="checkbox" name="multi[]" value="${nbRow-1}" class="choix-multiple" required>
+                <input type="checkbox" name="multi[]" value="${nbRow-1}" class="choix-multiple" >
                 <input type="hidden" name="refM[]" value="${nbRow-1}">
                 <div class="supprimer-form" onclick="onDeleteInput(${nbRow})"></div>`;
                 divInputs.appendChild(newInput);

@@ -1,6 +1,21 @@
 
 <?php
     $tab = getQuestion();
+    $param = getNombreQuestion();
+    $nombreQuestion = $param['num'];
+    $error="";
+    if (isset($_POST['okbtn'])) {
+        $num= $_POST['num'];
+        if (!is_chaine_numeric($num)) {
+            $error = "Veuillez entrer un nombre positif. ";
+        }
+        elseif ($num < 5) {
+            $error = "Veuillez entrer un nombre supérieur à 5. ";
+        }else {
+            $nombreQuestion = $num;
+            ajouterNombreQuestion($num);
+        }
+    }
 
 ?>
 
@@ -8,9 +23,10 @@
     <form action="" method="post" class="formlist-form">
         <div class="boutinput">
             <div class="text1">Nbre de question/jeu</div>
-            <input type="inputnombre" name="num" class="inputnombre" value="" autocomplete="off">
-            <button type="submit" name="btn" class="bouton">OK</button>
+            <input type="inputnombre" name="num" class="inputnombre" value="<?= $nombreQuestion?>" autocomplete="off">
+            <button type="submit" name="okbtn" class="bouton">OK</button>
         </div>
+        <span class="error-form"><?= $error?></span>
         <div class="tablelist-form">
         <?php 
             if (isset($_POST['btn']) && $_SESSION['fin']<count($tab)) {
@@ -30,23 +46,24 @@
                     <p class="titleKest"><?= $_SESSION['j'].". ".$tab[$i]["question"]; ?></p>
                 <?php
                     if ($tab[$i]['type']=="multiple") {
-                        foreach ($tab[$i]['bonne'] as $value) {
-                            echo '<input type="checkbox" class="radioKest" checked="checked">';
-                            echo '<strong>'.$value.'</strong><br>';
-                        }
-                        foreach ($tab[$i]['mauvaise'] as $value) {
-                            echo '<input type="checkbox" class="radioKest">';
-                            echo '<strong>'.$value.'</strong><br>';
+                        foreach ($tab[$i]['reponse'] as $key=>$value) {
+                            if ($value=="true") {
+                                echo '<input type="checkbox" class="radioKest" checked="checked">';
+                            }else {
+                                echo '<input type="checkbox" class="radioKest">';
+                            }
+                            echo '<strong>'.$key.'</strong><br>';
                         }
                     }elseif ($tab[$i]['type']=="radio") {
-                        foreach ($tab[$i]['bonne'] as $value) {
-                            echo '<input type="radio" class="radioKest" checked="checked">';
-                            echo '<strong>'.$value.'</strong><br>';
+                        foreach ($tab[$i]['reponse'] as $key=>$value) {
+                            if ($value=="true") {
+                                echo '<input type="radio" class="radioKest" checked="checked">';
+                            }else {
+                                echo '<input type="radio" class="radioKest">';
+                            }
+                            echo '<strong>'.$key.'</strong><br>';
                         }
-                        foreach ($tab[$i]['mauvaise'] as $value) {
-                            echo '<input type="radio" class="radioKest">';
-                            echo '<strong>'.$value.'</strong><br>';
-                        }
+                        
                     }else {
                         echo '<input type="text" class="reponse-input" name="" id="" >';
                     }

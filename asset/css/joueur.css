@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     margin: 0px;
     padding: 0px;
@@ -167,7 +171,6 @@ a{
     color: #8d8070;
     background-color: white;
     box-shadow: 0 -5px 5px -5px #8d8070;
-    box-shadow: ;
 }
 .interface-header{
     width: 90%;
@@ -255,6 +258,28 @@ a{
     font-size: 15px;
     font-weight: bold;
     color: silver;
+}
+button{
+    float: left;
+    margin-top: 30px;
+    color: white;
+    font-size:20px;
+    margin-right: 0px;
+    margin-left: 62px;
+    width: 145px;
+    height: 55px;
+    background-color: #51bfd0;
+    outline-style:none;
+    cursor:pointer;
+    border-radius: 2px;
+  }
+  .radioJeu{
+      margin-left: 35%;
+    
+  }
+  .multiJeu{
+    margin-left: 35%;
+    background-color: tomato;
 }
 
 
